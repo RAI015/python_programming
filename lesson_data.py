@@ -1,60 +1,29 @@
-r = [1, 2, 3, 4, 5, 1, 2, 3]
-print(r.index(3, 3))
+num_tuple = (10, 20)
+print(num_tuple)
 
-print(r.count(3))
+x, y = num_tuple
+print(x, y)
 
-if 100 in r:
-    print('exist')
+x, y = 10, 20
+print(x, y)
 
-r.sort()
-print(r)
+min, max = 0, 100
+print(min, max)
 
-r.sort(reverse=True)
-print(r)
+a, b, c, d, e, f = 'mike', '1', '1', '1', 'e', 'f'
+a = 'Mike'
+b = '1'
 
-r.reverse()
-print(r)
+i = 10
+j = 20
+tmp = i
+i = j
+j = tmp
 
-s = 'My name is Mike.'
-to_split = s.split(' ')
-print(to_split)
+print(i, j)
 
-x = ' ### '.join(to_split)
-print(x)
-
-
-print('##############')
-
-i = [1, 2, 3, 4, 5]
-j = i
-j[0] = 100
-print('j = ', j)
-print('i = ', i)
-
-
-x = [1, 2, 3, 4, 5]
-y = x.copy()
-# y = x[:]
-y[0] = 100
-print('y = ', y)
-print('x = ', x)
-
-
-# 数字や文字列の代入は、値渡し
-# リストやディクショナリーは参照渡し
-
-X = 20
-Y = X
-Y = 5
-print(id(X))
-print(id(Y))
-print(X)
-print(Y)
-
-X = ['a', 'b']
-Y = X
-Y[0] = 'p'
-print(id(X))
-print(id(Y))
-print(X)
-print(Y)
+a = 100
+b = 200
+print(a, b)
+a, b = b, a
+print(a, b)
