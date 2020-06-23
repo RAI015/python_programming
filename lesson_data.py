@@ -1,40 +1,24 @@
+y = [1, 2, 3]
+x = 1
+
+if x in y:
+    print('in')
+
+if 100 not in y:
+    print('not in')
+
 a = 1
 b = 2
 
-# a と b が等しい
-print(a == b)
+if not a == b:
+    print('Not equal')
 
-# a が b と異なる
-print(a != b)
+# こちらの書き方のが好ましい
+if a != b:
+    print('Not equal')
 
-# a が b よりも小さい
-print(a < b)
-
-# a が b よりも大きい
-print(a > b)
-
-# a が b 以下である
-print(a <= b)
-
-# a が b 以上である
-print(a >= b)
-
-# a も b も真であれば真
-if a > 0:
-    if b > 0:
-        print('a and b are positive')
-
-if a > 0 and b > 0:
-    print('a and b are positive')
-
-# a または b が真であれば真
-a = -1
-b = 1
-if a > 0:
-    print('a or b is positive')
-elif b > 0:
-    print('a or b is positive')
-
-if a > 0 or b > 0:
-    print('a or b is positive')
+# notの使い方
+is_ok = True
+if not is_ok:
+    print('Hello')
 
