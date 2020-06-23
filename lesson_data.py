@@ -1,21 +1,18 @@
-s = 'aaaaaaaaaaaaaaa' \
-    + 'bbbbbbbbbbbbbbb'
-print(s)
+x = 10
 
-x = 1 + 1 + 1 + 1 + 1 + 1 \
-    + 1 + 1
+if x < 0:
+    print('negative')
+elif x == 0:
+    print('zero')
+elif x == 10:
+    print('10')
+else:
+    print('positive')
 
-print(x)
+a = 5
+b = 10
 
-# Pythonは80文字以上になる場合は、次の行へ改行する暗黙のルール
-
-
-t = ('aaaaaaaaaaaaaaaa'
-     + 'bbbbbbbbbbbbbbb')
-
-print(t)
-
-y = (1 + 1 + 1 + 1 + 1
-     + 1 + 1 + 1)
-
-print(y)
+if a > 0:
+    print('a is positive')
+    if b > 0:
+        print('b is positive')
