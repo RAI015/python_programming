@@ -1,12 +1,13 @@
-def g():
-    for i in range(10):
-        yield i
+"""
+Test Test ########
+"""
 
+animal = 'cat'
 
-g = g()
+def f():
+    """Test func doc"""
+    print(f.__name__)
+    print(f.__doc__)
 
-
-g = (i for i in range(10) if i % 2 == 0)
-
-for x in g:
-    print(x)
+f()
+print('global:', globals())
