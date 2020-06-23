@@ -1,5 +1,9 @@
-def add_num(a: int, b: int) -> int:
-    return a + b
+def menu(entree='beef', drink='wine', dessert='ice'):
+    print('entree = ', entree)
+    print('drink = ', drink)
+    print('dessert = ', dessert)
 
-r = add_num('a', 'b')
-print(r)
+
+menu(entree='chicken', dessert='ice', drink='beer')
+menu()
+
