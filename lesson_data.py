@@ -1,23 +1,15 @@
-def menu(**kwargs):
-    print(kwargs)
-    for k, v in kwargs.items():
-        print(k, v)
+def example_func(param1, param2):
+    """Example function with types decumented in the docstring.
 
+    Args:
+        param1 (int): The first parameter.
+        param2 (str): The second parameter.
 
-# menu(entree='beef', drink='coffee')
+    Returns:
+         bool: The return value. True for success, False otherwise.
+    """
+    print(param1)
+    print(param2)
+    return True
 
-# d = {
-#     'entree': 'beef',
-#     'drink': 'ice coffee',
-#     'dessert': 'ice'
-# }
-#
-# menu(**d)
-
-
-def menu2(food, *args, **kwargs):
-    print(food)
-    print(args)
-    print(kwargs)
-
-menu2('banbana', 'apple', 'orange', entree='beef', drink='coffee')
+print(example_func.__doc__)
