@@ -1,14 +1,21 @@
+s = 'aaaaaaaaaaaaaaa' \
+    + 'bbbbbbbbbbbbbbb'
+print(s)
 
-print('XXXXX')
+x = 1 + 1 + 1 + 1 + 1 + 1 \
+    + 1 + 1
 
-"""
-test
-test
-test
+print(x)
 
-"""
-# test
-print('XXXXX')
+# Pythonは80文字以上になる場合は、次の行へ改行する暗黙のルール
 
-# Apple price
-some_value = 100
+
+t = ('aaaaaaaaaaaaaaaa'
+     + 'bbbbbbbbbbbbbbb')
+
+print(t)
+
+y = (1 + 1 + 1 + 1 + 1
+     + 1 + 1 + 1)
+
+print(y)
