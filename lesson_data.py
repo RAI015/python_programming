@@ -1,31 +1,23 @@
-def counter(num=10):
-    for _ in range(num):
-        yield 'run'
+t = (1, 2, 3, 4, 5)
+t2 = (5, 6, 7, 8, 9, 10)
 
-def greeting():
-    yield 'Good morning'
-    yield 'Good afternoon'
-    yield 'Good night'
+r = []
+for i in t:
+    if i % 2 == 0:
+        r.append(i)
 
-g = greeting()
-c = counter()
+print(r)
 
-print(next(g))
+r = [i for i in t if i % 2 == 0]
+print(r)
 
-print(next(c))
-print(next(c))
-print(next(c))
-print(next(c))
-print(next(c))
+print('###############')
+r = []
+for i in t:
+    for j in t2:
+        r.append(i * j)
 
-print(next(g))
+print(r)
 
-print(next(c))
-print(next(c))
-print(next(c))
-print(next(c))
-print(next(c))
-
-print(next(g))
-print(next(g))
-
+r = [i * j for i in t for j in t2]
+print(r)
