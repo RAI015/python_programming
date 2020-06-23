@@ -1,9 +1,23 @@
-def say_something(word, *args):
-    print('word = ', word)
-    for arg in args:
-        print(arg)
+def menu(**kwargs):
+    print(kwargs)
+    for k, v in kwargs.items():
+        print(k, v)
 
-say_something('Hi!', 'Mike', 'Nancy')
 
-t = ('Mike', 'Nancy')
-say_something('Hi!', *t)
+# menu(entree='beef', drink='coffee')
+
+# d = {
+#     'entree': 'beef',
+#     'drink': 'ice coffee',
+#     'dessert': 'ice'
+# }
+#
+# menu(**d)
+
+
+def menu2(food, *args, **kwargs):
+    print(food)
+    print(args)
+    print(kwargs)
+
+menu2('banbana', 'apple', 'orange', entree='beef', drink='coffee')
