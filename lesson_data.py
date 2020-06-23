@@ -1,9 +1,16 @@
-is_empty = None
-print(help(is_empty))
+# count = 0
+# while count < 5:
+#     print(count)
+#     count += 1
 
-if is_empty is None:
-    print('None!!!')
+count = 0
+while True:
+    if count >= 5:
+        break
 
-print(1 == True)
-print(1 is True)
-print(True is True)
+    if count == 2:
+        count += 1
+        continue
+
+    print(count)
+    count += 1
