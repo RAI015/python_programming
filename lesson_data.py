@@ -1,18 +1,31 @@
-l = ['Mon', 'tue', 'Wed', 'Thu', 'fri', 'sat', 'Sun']
+def counter(num=10):
+    for _ in range(num):
+        yield 'run'
 
-def change_words(words, func):
-    for word in words:
-        print(func(word))
+def greeting():
+    yield 'Good morning'
+    yield 'Good afternoon'
+    yield 'Good night'
 
+g = greeting()
+c = counter()
 
-def sample_func(word):
-    return word.capitalize()
+print(next(g))
 
-def sample_func2(word):
-    return word.lower()
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
 
-# sample_func = lambda word: word.capitalize()
+print(next(g))
 
-change_words(l, lambda word: word.capitalize())
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
+print(next(c))
 
-change_words(l, lambda word: word.lower())
+print(next(g))
+print(next(g))
+
