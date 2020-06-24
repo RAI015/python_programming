@@ -1,18 +1,46 @@
-import os
-import subprocess
+import datetime
 
-# os.system('ls')
+now = datetime.datetime.now()
+print(now)
+print(now.isoformat())
+print(now.strftime('%d/%m/%y-%H:%M:%S:%f'))
 
-subprocess.run(['ls', '-al'])
+today = datetime.date.today()
+print(today)
+print(today.isoformat())
+print(today.strftime('%d/%m/%y'))
 
-# subprocess.run('ls -al | grep test', shell=True)
+t = datetime.time(hour=1, minute=10, second=5, microsecond=100)
+print(t)
+print(t.isoformat())
+print(t.strftime('%H:%M:%S:%f'))
 
-# r = subprocess.run('lsa', shell=True, check=True)
-# print(r.returncode)
+print(now)
+# d = datetime.timedelta(weeks=-1)
+d = datetime.timedelta(days=-1)
+# d = datetime.timedelta(hours=-1)
+# d = datetime.timedelta(minutes=-1)
+# d = datetime.timedelta(seconds=-1)
+# d = datetime.timedelta(microseconds=-1)
+print(now + d)
+
+import time
+# print('###')
+# time.sleep(1)
 # print('###')
 
-# p1 = subprocess.Popen(['ls', '-al'], stdout=subprocess.PIPE)
-# p2 = subprocess.Popen(['grep', 'test'], stdin=p1.stdout, stdout=subprocess.PIPE)
-# p1.stdout.close()
-# output = p2.communicate()[0]
-# print(output)
+print(time.time())
+
+
+# バックアップファイルを作れる
+import os
+import shutil
+
+file_name = 'test.txt'
+
+if os.path.exists(file_name):
+    shutil.copy(file_name, "{}.{}".format(
+        file_name, now.strftime('%Y_%m_%d_%H:%M:%S')))
+
+with open(file_name, 'w') as f:
+    f.write('test')
