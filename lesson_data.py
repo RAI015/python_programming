@@ -1,11 +1,8 @@
-import lesson_package.talk.animal
-
-import config
-
-
-def main():
-    lesson_package.talk.animal.sing()
+class Person(object):
+    def say_something(self):
+        print('hello')
 
 
-if __name__ == '__main__':
-    main()
+person = Person()
+person.say_something()
+
