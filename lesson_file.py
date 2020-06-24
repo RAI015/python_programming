@@ -1,3 +1,20 @@
-with open('test.txt', 'w') as f:
-    f.write('Test\n')
-    # withステートメントで書くとcloseを書くのを省略できる
+s ="""\
+AAA
+BBB
+CCC
+DDD
+"""
+
+# with open('test.txt', 'w') as f:
+#     f.write(s)
+
+with open('test.txt', 'r') as f:
+    # print(f.read())
+    while True:
+        chunk = 2
+        line = f.readline(chunk)
+        # print(line, end='')
+
+        print(line)
+        if not line:
+            break
