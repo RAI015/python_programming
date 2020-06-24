@@ -1,22 +1,11 @@
-# from lesson_package.talk import human
-# from lesson_package.talk import animal
-# from lesson_package.talk import *
+import builtins
 
-# import *の書き方もあまり好ましくない（何が読み込まれるかすぐにわからないため）
+ranking = {
+    'A': 100,
+    'B': 85,
+    'C': 95,
+}
 
-# print(animal.sing())
-# print(animal.cry())
+# ranking.get('A')
 
-# 関数から読み込むのではなく、モジュールから読み込むのが良い
-# r = utils.say_twice('hello')
-# print(r)
-
-# print(human.sing())
-# print(human.cry())
-
-try:
-    from lesson_package import utils
-except ImportError:
-    from lesson_package.tools import utils
-
-utils.say_twice('word')
+print(sorted(ranking, key=ranking.get, reverse=True))
