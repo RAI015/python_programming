@@ -1,35 +1,28 @@
+def about(year):
+    print('about human {}'.format(year))
+
+
 class Person(object):
 
     kind = 'human'
-
-    def __init__(self, name):
-        self.name = name
-
-    def who_are_you(self):
-        print(self.name, self.kind)
-
-
-a = Person('A')
-a.who_are_you()
-
-b = Person('B')
-b.who_are_you()
-
-class T(object):
-
     def __init__(self):
-        self.words = []
+        self.x = 100
 
-    def add_word(self, word):
-        self.words.append(word)
+    @classmethod
+    def what_is_your_kind(cls):
+        return cls.kind
+
+    @staticmethod
+    def about(year):
+        print('about human {}'.format(year))
 
 
-c = T()
-c.add_word('add 1')
-c.add_word('add 2')
-print(c.words)
+a = Person()
+print(a.what_is_your_kind())
 
-d = T()
-d.add_word('add 3')
-d.add_word('add 4')
-print(d.words)
+print(Person.kind)
+print(Person.what_is_your_kind())
+
+Person.about(1999)
+
+about(1898)
