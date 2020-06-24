@@ -1,7 +1,20 @@
-from termcolor import colored
+# Python標準ライブラリ
+import collections
+import os
+import sys
 
-print('test')
+# サードパーティライブラリ
+import termcolor
 
-print(colored('test', 'green'))
+# 同じ会社の別のチームが作ったライブラリ
+import lesson_package
 
-# print(help(colored))
+# ローカルファイル
+import config
+
+print(collections.__file__)
+print(termcolor.__file__)
+print(lesson_package.__file__)
+print(config.__file__)
+
+print(sys.path)
