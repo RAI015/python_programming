@@ -1,14 +1,7 @@
-import requests
+import http.server
+import socketserver
 
-payload = {'key1': 'value1', 'key2': 'value2'}
 
-# r = requests.get('http://httpbin.org/get', params=payload)
-# r = requests.post('http://httpbin.org/post', data=payload)
-# r = requests.put('http://httpbin.org/put', data=payload)
-# r = requests.delete('http://httpbin.org/delete', data=payload)
-
-r = requests.get('http://httpbin.org/get', params=payload, timeout=0.5)
-
-print(r.status_code)
-print(r.text)
-print(r.json())
+with socketserver.TCPServer(('127.0.0.1', 8000),
+                            http.server.SimpleHTTPRequestHandler) as httpd:
+    httpd.serve_forever()
