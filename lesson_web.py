@@ -1,52 +1,38 @@
 """
-<?xml version'1.0' encording='utf-8' ?>
-<root>
-    <employee>
-        <employ>
-            <id>111</id>
-            <name>Mike</name>
-        </employ>
-        <employ>
-            <id>222</id>
-            <name>Nancy</name>
-        </employ>
-    </employee>
-</root>
+REST
 
-{
-    "employee":
-        [
-            {"id": 111, "name": "Mike"},
-            {"id": 222, "name": "Nancy"}
-        ]
-}
+HTTPメソッド　クライアントが行いたい処理をサーバに伝える
+
+GET     データの参照
+POST    データの新規登録
+PUT     データの更新
+DELETE  データの削除
 """
-import xml.etree.ElementTree as ET
 
-root = ET.Element('root')
-tree = ET.ElementTree(element=root)
+import urllib.request
+import json
 
-employee = ET.SubElement(root, 'employee')
 
-employ = ET.SubElement(employee, 'employ')
+payload = {'key1': 'value1', 'key2': 'value2'}
 
-employ_id = ET.SubElement(employ, 'id')
-employ_id.text = '111'
-employ_id = ET.SubElement(employ, 'name')
-employ_id.text = 'Mike'
+# url = 'http://httpbin.org/get' + '?' + urllib.parse.urlencode(payload)
+# # print(url)
+# with urllib.request.urlopen(url) as f:
+#     r = json.loads(f.read().decode('utf-8'))
+#     print(type(r))
 
-employ_id = ET.SubElement(employ, 'id')
-employ_id.text = '222'
-employ_id = ET.SubElement(employ, 'name')
-employ_id.text = 'Nancy'
+payload = json.dumps(payload).encode('utf-8')
+# req = urllib.request.Request(
+#     'http://httpbin.org/post', data=payload, method='POST')
+# with urllib.request.urlopen(req) as f:
+#     print(json.loads(f.read().decode('utf-8')))
 
-tree.write('test.xml', encoding='utf-8', xml_declaration=True)
+req = urllib.request.Request(
+    'http://httpbin.org/put', data=payload, method='PUT')
+with urllib.request.urlopen(req) as f:
+    print(json.loads(f.read().decode('utf-8')))
 
-tree = ET.ElementTree(file='test.xml')
-root = tree.getroot()
-
-for employee in root:
-    for employ in employee:
-        for person in employ:
-            print(person.tag, person.text)
-
+req = urllib.request.Request(
+    'http://httpbin.org/delete', data=payload, method='DELETE')
+with urllib.request.urlopen(req) as f:
+    print(json.loads(f.read().decode('utf-8')))
