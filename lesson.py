@@ -1,28 +1,80 @@
-s = 'My name is Mike. Hi Mike.'
-print(s)
-is_start = s.startswith('My')
-print(is_start)
-is_start = s.startswith('X')
-print(is_start)
+# x = 1;
+# y = 2;
+#
+# x = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafaaaa '
+#
+# def test_func(x, y, z,
+#               faofejaofjafoja:ofjoawfjoafjeoagjhfjafoejafojfe='test'):
+#     """
+#
+#     :param x:
+#     :param y:
+#     :param z:
+#     :param faofejaofjafoja:
+#     :return:
+#
+#     See details at: http://sakaijunfaofeja:ofjeaofjo//fawijofja:fawf/fjaojoifejejkdjfoejfefjwoafjawofjnjgoiejg:ajeofoe:
+#     """
+#
+#     print('test')
+#
+# if x and y:
+#     print('exist')
+#
+#     x = {'tets': 'sts'}
+#
+#     x, y = y, x
+#
+#     x = 100
+#     yyyyyy = 200
+#
+# word = 'hello'
+# word2 = '!'
+#
+# new_word = '{} $$$$$ {} !!!!!'.format(word, word2)
+# new_word = word + '$$$$' + word2 + '!!!!!'
+#
+# long_word = ""
+# for word in ['fafewaf', 'fafeaf', 'faef']:
+#     long_word += "{}fafwaef".format(word)
+#
+# long_word = []
+# for word in ['fafewaf', 'fafeaf', 'faef']:
+#     long_word.append("{}fafwaef".format(word))
+# new_long_word = ''.join(long_word)
+#
+# print('fafaofjawof')
+# print("faefaffdffe")
+# print("feond'fewafjojd")
+#
+# 'fafajofjaf {} fadf'.format('test')
+# "fafajofjaf {} fadf".format('test')
+#
+# if x:
+#     print('exit')
+# else:
+#     print('else')
+#
+# if x: print('exit')
+# else: print('else')
 
-print('##################')
+def base(x):
+    def plus(y):
+        return x + y
+    return plus
 
-print(s.find('Mike'))
-print(s.rfind('Mike'))
-print(s.count('Mike'))
-print(s.capitalize())
-print(s.title())
-print(s.upper())
-print(s.lower())
-print(s.replace('Mike', 'Nancy'))
+plus = base(10)
+print(plus(10))
+print(plus(30))
 
-a = 'a'
-print(f'a is {a}')
+i = 0
+def add_num():
+    def plus(y):
+        return i + y
+    return plus
 
-x, y, z = 1, 2, 3
-print(f'a is {x}, {y}, {z}')
-print(f'a is {z}, {y}, {x}')
-
-name = 'Jun'
-family = 'Sakai'
-print(f'My name is {name} {family}. Watashi ha {family} {name} desu.')
+i = 10
+plus = add_num()
+print(plus(10))
+i = 100
+print(plus(30))

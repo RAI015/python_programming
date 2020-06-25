@@ -12,6 +12,7 @@ class Robot(object):
     def __init__(self, name=DEFAULT_ROBOT_NAME, user_name='',
                  speak_color='green'):
         self.name = name
+
         self.user_name = user_name
         self.speak_color = speak_color
 
@@ -25,6 +26,10 @@ class Robot(object):
             if user_name:
                 self.user_name = user_name.title()
                 break
+
+    @property
+    def user_name(self):
+        return self._user_name
 
 
 class RestaurantRobot(Robot):
